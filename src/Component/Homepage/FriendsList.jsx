@@ -5,10 +5,11 @@ const FriendsList = () => {
     const {friends,loading} = useFriends();
     
     return (
-        <div>
+        <div className='container mx-auto '>
+            <p className='mb-4 text-2xl font-semibold'>Your Friends</p>
             {
                 friends.map(()=>{
-                    loading
+                    loading ? "" : ""
                 })
             }
         </div>
