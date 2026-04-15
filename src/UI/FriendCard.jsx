@@ -20,7 +20,12 @@ const FriendCard = ({ friend }) => {
           })}
         </div>
         <div className="card-actions">
-          <button className="btn btn-primary rounded-3xl">{friend.status}</button>
+            {
+                friend.status == "Overdue" ? (<button className="btn bg-[#ef4444FF] rounded-3xl text-white">{friend.status}</button>):
+                friend.status == "On-Track" ? (<button className="btn bg-[#efad44FF] rounded-3xl text-white">{friend.status}</button>):
+                (<button className="btn bg-[#244d3fFF] rounded-3xl text-white">{friend.status}</button>)
+            }
+         
         </div>
       </div>
     </div>
