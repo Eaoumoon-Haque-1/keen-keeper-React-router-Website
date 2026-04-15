@@ -3,11 +3,14 @@ import useFriends from '../../hooks/useFriends';
 
 const FriendsList = () => {
     const {friends,loading} = useFriends();
-    console.log(friends,loading, "friends");
     
     return (
         <div>
-            friends
+            {
+                friends.map(()=>{
+                    loading
+                })
+            }
         </div>
     );
 };
