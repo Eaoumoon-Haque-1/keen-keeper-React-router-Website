@@ -1,11 +1,36 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
-    return (
-        <div>
-            footer
+  return (
+    <div className="bg-[#244d3fFF] pt-20 px-60 pb-8">
+      <div className="container mx-auto">
+          <h1 className="font-extrabold text-6xl text-white text-center">
+            KeenKeeper
+          </h1>
+          <p className="text-white text-center my-4">
+            Your personal shelf of meaningful connections. Browse, tend, and
+            nurture the relationships that matter most.
+          </p>
+          <p className="text-white text-center font-medium mb-4">
+            Social Links
+          </p>
+          <div className="flex items-center justify-center space-x-3 mb-10">
+            <img src="/src/assets/images/instagram.png" alt="" />
+            <img src="/src/assets/images/facebook.png " alt="" />
+            <img src="/src/assets/images/twitter.png" alt="" />
+          </div>
+          <div className="divider mb-8"></div>
+        <div className="flex items-center justify-between text-[#fafafaFF] mb-8">
+            <p>© 2026 KeenKeeper. All rights reserved.</p>
+            <div className="flex items-center justify-center text-[#fafafaFF] space-x-3">
+                <p>Privacy Policy</p>   
+                <p>Terms Of Service</p>
+                <p>Cookie</p>
+            </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Footer;

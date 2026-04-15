@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router";
 import RootLayout from "../layout/RootLayout";
 import Homepage from "../pages/Homepage/Homepage";
+import Timeline from "../pages/Timeline/Timeline";
+import Stats from "../pages/Stats/Stats";
 
 export const router = createBrowserRouter([
     {
@@ -10,7 +12,15 @@ export const router = createBrowserRouter([
             {
                 index:true,
                 Component:Homepage
-            }
+            },
+            {
+                path:"/timeline",
+                Component: Timeline
+            },
+            {
+                path:"/stats",
+                Component: Stats
+            },
         ]
     }
 ])
