@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router";
 import useFriends from "../../hooks/useFriends";
 import { RingLoader } from "react-spinners";
 import "./Friend.css";
+import { IoAlarmSharp } from "react-icons/io5";
+import { LuPhoneCall } from "react-icons/lu";
+import { TiMessages } from "react-icons/ti";
+import { FaVideo } from "react-icons/fa";
+import { InteractionsWIthFriendsContext } from "../../Context/InteractionsWIthFriendsContext";
+import { toast } from "react-toastify";
+
 const Friend = () => {
   const { friends, loading } = useFriends();
   const { id } = useParams();
   const expectedFriend = friends.find((friend) => friend.id == id);
   //   console.log(expectedFriend);
+  const { interactions, setInteractions } = useContext(
+    InteractionsWIthFriendsContext,
+  );
 
   if (loading) {
     return (
@@ -18,6 +28,23 @@ const Friend = () => {
   }
   const { tags } = expectedFriend;
   // console.log(tags);
+  const handleInteractions = (type) => {
+    const newInteraction = {
+      friendId: expectedFriend.id,
+      friendName: expectedFriend.name,
+      actionType: type,
+      touchedAt: new Date().toLocaleDateString("en-US", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      }),
+    };
+
+    setInteractions([...interactions, newInteraction]);
+    toast(`${type} with ${expectedFriend.name}`);
+  };
+//   console.log(interactions);
   return (
     <div className="container mx-auto py-20">
       <div className="friend-page">
@@ -93,7 +120,9 @@ const Friend = () => {
 
           <div className="actions-stack">
             <button className="action-mini">
-              <span className="mini-icon">⏰</span>
+              <span className="mini-icon">
+                <IoAlarmSharp />
+              </span>
               <span>Snooze 2 Weeks</span>
             </button>
 
@@ -112,18 +141,33 @@ const Friend = () => {
             <h3 className="quick-title">Quick Check-In</h3>
 
             <div className="quick-grid">
-              <button className="quick-btn">
-                <span className="quick-icon">📞</span>
+              <button
+                className="quick-btn"
+                onClick={() => handleInteractions("Call")}
+              >
+                <span className="quick-icon">
+                  <LuPhoneCall />
+                </span>
                 <span>Call</span>
               </button>
 
-              <button className="quick-btn">
-                <span className="quick-icon">💬</span>
+              <button
+                className="quick-btn"
+                onClick={() => handleInteractions("Text")}
+              >
+                <span className="quick-icon">
+                  <TiMessages />
+                </span>
                 <span>Text</span>
               </button>
 
-              <button className="quick-btn">
-                <span className="quick-icon">🎥</span>
+              <button
+                className="quick-btn"
+                onClick={() => handleInteractions("Video")}
+              >
+                <span className="quick-icon">
+                  <FaVideo />
+                </span>
                 <span>Video</span>
               </button>
             </div>
