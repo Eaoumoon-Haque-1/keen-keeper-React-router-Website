@@ -16,7 +16,7 @@ const FriendsList = () => {
                         <RingLoader />
                     </div> 
                     ) : 
-                    ( <div className='grid gap-6 grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-3'>
+                    ( <div className='grid gap-3 md:gap-6 grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-3 '>
                         {
                             friends.map((friend,idx)=> <FriendCard friend={friend} key={idx}></FriendCard>)
                         }

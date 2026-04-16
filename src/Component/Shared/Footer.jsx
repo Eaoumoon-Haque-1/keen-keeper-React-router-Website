@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-[#244d3fFF] pt-20 px-60 pb-8">
+    <div className="bg-[#244d3fFF] px-10 pt-8  md:pt-20 md:px-40 lg:px-60 pb-8">
       <div className="container mx-auto">
-          <h1 className="font-extrabold text-6xl text-white text-center">
+          <h1 className="font-extrabold text-3xl md:text-6xl text-white text-center">
             KeenKeeper
           </h1>
           <p className="text-white text-center my-4">
@@ -20,9 +20,9 @@ const Footer = () => {
             <img src="/src/assets/images/twitter.png" alt="" />
           </div>
           <div className="divider mb-8"></div>
-        <div className="flex items-center justify-between text-[#fafafaFF] mb-8">
+        <div className="flex items-center justify-between flex-col-reverse gap-2 md:flex-row text-[#fafafaFF] mb-8">
             <p>© 2026 KeenKeeper. All rights reserved.</p>
-            <div className="flex items-center justify-center text-[#fafafaFF] space-x-3">
+            <div className="md:flex md:items-center md:justify-center grid grid-cols-1 gap-2 text-[#fafafaFF] md:space-x-3">
                 <p>Privacy Policy</p>   
                 <p>Terms Of Service</p>
                 <p>Cookie</p>

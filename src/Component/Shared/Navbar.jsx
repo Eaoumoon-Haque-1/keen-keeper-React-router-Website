@@ -13,7 +13,7 @@ const Navbar = () => {
           <a className=" text-2xl font-semibold"><span className="font-extrabold">Keen</span>Keeper</a>
         </div>
         <div >
-          <ul className="flex items-center space-x-2">
+          <ul className="md:flex md:items-center md:space-x-2 grid grid-cols-1">
            <li><MyNavLink to={"/"} ><GrHomeRounded />Home</MyNavLink></li>
            <li><MyNavLink to={"/timeline"}><RiTimeLine />Timeline</MyNavLink></li>
            <li><MyNavLink to={"/stats"}><ImStatsDots />Stats</MyNavLink></li>
