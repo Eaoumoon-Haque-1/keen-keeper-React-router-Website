@@ -5,7 +5,7 @@ import twitterImg from "../../assets/images/twitter.png";
 const Footer = () => {
   return (
     <div className="bg-[#244d3fFF] px-10 pt-8  md:pt-20 md:px-40 lg:px-60 pb-8">
-      <div className="container mx-auto">
+      <div className="">
           <h1 className="font-extrabold text-3xl md:text-6xl text-white text-center">
             KeenKeeper
           </h1>

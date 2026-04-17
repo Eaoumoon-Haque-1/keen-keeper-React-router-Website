@@ -8,7 +8,7 @@ import { RiTimeLine } from "react-icons/ri";
 const Navbar = () => {
   return (
     <div className="shadow">
-      <div className="navbar bg-base-100 container mx-auto">
+      <div className="navbar bg-base-100 w-7/8 mx-auto">
         <div className="flex-1">
           <a className=" text-2xl font-semibold"><span className="font-extrabold">Keen</span><span className="text-[#244d3fFF]">Keeper</span></a>
         </div>

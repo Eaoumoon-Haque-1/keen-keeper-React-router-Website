@@ -30,7 +30,7 @@ const Timeline = () => {
   };
 
   return (
-    <div className="container mx-auto space-y-4 my-20">
+    <div className="w-7/8 mx-auto space-y-4 my-20">
       <p className="text-2xl lg:text-5xl font-bold">Timeline</p>
 
       <div className="flex flex-wrap gap-3">

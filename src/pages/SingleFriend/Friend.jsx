@@ -47,7 +47,7 @@ const Friend = () => {
   };
 //   console.log(interactions);
   return (
-    <div className="container mx-auto py-20">
+    <div className="w-7/8 mx-auto py-20">
       <div className="friend-page">
         <div className="friend-dashboard">
           <div className="profile-card card">

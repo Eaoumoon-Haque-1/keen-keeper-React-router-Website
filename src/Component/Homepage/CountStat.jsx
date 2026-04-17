@@ -20,8 +20,8 @@ const CountStat = () => {
     (friend) => friend.status === "Overdue").length;
     
   return (
-    <div className="container mx-auto">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center mb-10">
+    <div className="w-7/8 mx-auto">
+      <div className="w-7/8 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center mb-10">
         <div className="shadow-lg p-8 ">
           <p className="text-3xl font-semibold text-[#244d3fFF]">
             {friends.length}
