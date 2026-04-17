@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../Component/Shared/Navbar';
 import { Outlet } from 'react-router';
-import Footer from '../Component/Shared/footer';
+import Footer from '../Component/Shared/Footer';
 import { ToastContainer } from 'react-toastify';
 
 const RootLayout = () => {
