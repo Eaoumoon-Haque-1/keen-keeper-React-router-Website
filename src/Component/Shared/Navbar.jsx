@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className="shadow">
       <div className="navbar bg-base-100 container mx-auto">
         <div className="flex-1">
-          <a className=" text-2xl font-semibold"><span className="font-extrabold">Keen</span>Keeper</a>
+          <a className=" text-2xl font-semibold"><span className="font-extrabold">Keen</span><span className="text-[#244d3fFF]">Keeper</span></a>
         </div>
         <div >
           <ul className="md:flex md:items-center md:space-x-2 grid grid-cols-1">

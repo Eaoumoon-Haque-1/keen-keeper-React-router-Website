@@ -10,7 +10,7 @@ const FriendCard = ({ friend }) => {
           <img
             src={friend.picture}
             alt={friend.name}
-            className="rounded-xl mx-auto"
+            className="rounded-full mx-auto"
           />
         </figure>
         <div className="card-body items-center text-center">

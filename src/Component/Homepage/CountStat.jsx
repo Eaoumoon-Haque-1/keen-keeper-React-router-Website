@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import useFriends from "../../hooks/useFriends";
 import { RingLoader } from "react-spinners";
+import { InteractionsWIthFriendsContext } from "../../Context/InteractionsWIthFriendsContext";
 
 const CountStat = () => {
+  const {interactions} = useContext(InteractionsWIthFriendsContext);
   const { friends, loading } = useFriends();
   if (loading)
     return (
@@ -39,7 +41,7 @@ const CountStat = () => {
           <p className="text-[#64748bFF] text-[18px]">Need Attention</p>
         </div>
         <div className="shadow-lg p-8">
-          <p className="text-3xl font-semibold text-[#244d3fFF]">10</p>
+          <p className="text-3xl font-semibold text-[#244d3fFF]">{interactions.length}</p>
           <p className="text-[#64748bFF] text-[18px]">
             Interactions This Month
           </p>

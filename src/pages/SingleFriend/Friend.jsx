@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import { useParams } from "react-router";
 import useFriends from "../../hooks/useFriends";
 import { RingLoader } from "react-spinners";
@@ -29,6 +29,7 @@ const Friend = () => {
   const { tags } = expectedFriend;
   // console.log(tags);
   const handleInteractions = (type) => {
+  
     const newInteraction = {
       friendId: expectedFriend.id,
       friendName: expectedFriend.name,
